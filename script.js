@@ -57,3 +57,17 @@ const intervalo = setInterval(() => {
     }
 
 }, 1000);
+
+// 🎮 FUNCIÓN DE MÚSICA LOCAL
+
+function playMusic() {
+    const audio = document.getElementById("music");
+
+    if (audio.paused) {
+        audio.play();
+        alert("🎵 ¡Música galáctica activada!");
+    } else {
+        audio.pause();
+        alert("🔇 Música pausada");
+    }
+}
