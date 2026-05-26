@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at top, #5b1bbd, #19002f 70%);
+    color: white;
+    position: relative;
+}
+
+/* ESTRELLAS */
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: parpadear 3s infinite;
+}
+
+@keyframes parpadear {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* CONTENEDOR */
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 95%;
+    max-width: 500px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.45);
+    border: 3px solid #9f5fff;
+    border-radius: 35px;
+    backdrop-filter: blur(10px);
+    padding: 30px 20px;
+    box-shadow:
+        0 0 25px #8b3dff,
+        0 0 60px rgba(153, 0, 255, 0.5);
+}
+
+.titulo-top {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #ffe600;
+}
+
+.nombre {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 4rem;
+    color: #00d9ff;
+    letter-spacing: 3px;
+    text-shadow:
+        3px 3px 0 #000,
+        0 0 20px #00d9ff;
+}
+
+.edad {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ff006a, #ff7300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: 'Luckiest Guy', cursive;
+    border: 5px solid white;
+    box-shadow: 0 0 25px #ff4da6;
+}
+
+.cumplo {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    margin-bottom: 25px;
+}
+
+.imagen img {
+    width: 100%;
+    display: block;
+}
+
+.detalle {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icono {
+    font-size: 2rem;
+}
+
+.detalle h3 {
+    font-size: 1rem;
+    color: #ffe600;
+}
+
+.detalle p {
+    font-size: 1rem;
+}
+
+/* CUENTA REGRESIVA */
+
+.countdown {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.countdown h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #00ffea;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 85px;
+    padding: 15px 10px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #2d0b55, #47108b);
+    border: 2px solid #9f5fff;
+    box-shadow: 0 0 15px rgba(149, 0, 255, 0.6);
+}
+
+.box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.box small {
+    color: #ddd;
+}
+
+/* BOTONES */
+
+.botones {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    text-align: center;
+    padding: 16px;
+    border-radius: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.btn-si {
+    background: linear-gradient(145deg, #00ff88, #00b35f);
+    color: black;
+    box-shadow: 0 0 20px #00ff88;
+}
+
+.btn-no {
+    background: linear-gradient(145deg, #ff2b6a, #b3003f);
+    color: white;
+    box-shadow: 0 0 20px #ff2b6a;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    .nombre {
+        font-size: 3rem;
+    }
+
+    .edad {
+        width: 95px;
+        height: 95px;
+        font-size: 2.5rem;
+    }
+
+    .box {
+        width: 70px;
+    }
+
+    .mapa {
+        margin-top: 10px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+}
